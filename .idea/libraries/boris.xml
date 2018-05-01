@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="boris">
+    <CLASSES>
+      <root url="jar://D:/java-libs/boris.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/java-libs/boris.jar!/" />
+    </SOURCES>
+  </library>
+</component>
