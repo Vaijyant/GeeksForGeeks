@@ -8,7 +8,7 @@ public class SetDS {
     public static void main(String[] args) {
 
         // Set demonstration using HashSet
-        Set<String> set = new HashSet<String>();
+        HashSet<String> set = new HashSet<String>();
         set.add("Zebra");
         set.add("Yankee");
         set.add("Alpha");
