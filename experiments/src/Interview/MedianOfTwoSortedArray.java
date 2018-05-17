@@ -1,5 +1,10 @@
 package Interview;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class MedianOfTwoSortedArray {
 
 
@@ -7,8 +12,8 @@ public class MedianOfTwoSortedArray {
 
         int m = nums1.length;
         int n = nums2.length;
-
-        int[] arr = new int[m + n];
+        int N = m+n;
+        /*int[] arr = new int[m + n];
 
         int m1 = m - 1;
         int n1 = n - 1;
@@ -30,7 +35,34 @@ public class MedianOfTwoSortedArray {
             return arr[(m + n) / 2];
         } else {
             return (arr[(m + n) / 2] + arr[((m + n) / 2) - 1]) / 2.0;
+        }*/
+
+        PriorityQueue<Integer> queue = new PriorityQueue<>(N, Comparator.reverseOrder());
+
+        for(int num : nums1)
+            queue.add(num);
+        for(int num : nums2)
+            queue.add(num);
+
+
+        ArrayList l = new ArrayList(queue);
+
+        System.out.println(queue);
+
+        if(N%2 == 1){
+
+            int d = (Integer) l.get(N/2);
+            return (double) d;
         }
+        else{
+            int i = (Integer) l.get(N/2 - 1);
+            int j = (Integer) l.get(N/2);
+
+            return (i+j) / 2.0;
+
+
+        }
+
 
     }
 
