@@ -31,7 +31,7 @@ public class QuickSort {
                 j--;
             }
         }
-        if (low < i - 1)
+        if (low < j)
             qSort(arr, low, j);
         if (high > i)
             qSort(arr, i, high);
