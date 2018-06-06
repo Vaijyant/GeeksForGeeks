@@ -5,40 +5,36 @@ public class QuickSort {
 
     public static void qSort(int[] arr, int low, int high) {
 
-        if (arr == null || arr.length == 0)
-            return;
-        if(low >= high)
-            return;
+        int index = partition(arr, low, high);
+        if (low < index - 1)
+            qSort(arr, low, index - 1);
 
+        if (index < high)
+            qSort(arr, index, high);
+    }
 
-        int middle = low + (high - low) / 2;
-        int pivot = arr[middle];
+    public static int partition(int[] arr, int left, int right) {
 
-        int i = low, j = high;
+        int pivot = arr[(left + right) / 2];
 
-        while (i <= j) {
-            while (arr[i] < pivot)
-                i++;
-            while (arr[j] > pivot)
-                j--;
+        while (left <= right) {
+            while (arr[left] < pivot) left++;
+            while (arr[right] > pivot) right--;
 
-            if (i <= j) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+            if (left <= right) {
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
 
-                i++;
-                j--;
+                left++;
+                right--;
             }
         }
-        if (low < j)
-            qSort(arr, low, j);
-        if (high > i)
-            qSort(arr, i, high);
+        return left;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 9, 3, 7, 4, 6, 5, 0, 2, 8};
+        int[] arr = {5, 8, 4, 7, 6, 6};
 
         qSort(arr, 0, arr.length - 1);
         display(arr);
