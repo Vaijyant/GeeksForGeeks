@@ -1,2 +1,2 @@
-# GeeksForGeeks
-Java practice from Geeks for Geeks
+# Java Coding Ground
+Java practice.
