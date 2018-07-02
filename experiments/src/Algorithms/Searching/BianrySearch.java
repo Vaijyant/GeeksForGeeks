@@ -1,4 +1,4 @@
-package SortingSearchingAlgorithms;
+package Algorithms.Searching;
 
 public class BianrySearch {
 
