@@ -11,7 +11,7 @@ public class Problem03 {
         }
 
         StringBuilder strB = new StringBuilder(str);
-        for(int i=0; i<spaceCount; i++){
+        for (int i = 0; i < spaceCount; i++) {
             strB.append("  ");
         }
 
@@ -19,14 +19,13 @@ public class Problem03 {
         int length = url.length;
 
         for (int i = str.length() - 1; i >= 0; i--) {
-            if(url[i]==' '){
+            if (url[i] == ' ') {
                 url[length - 1] = '0';
                 url[length - 2] = '2';
                 url[length - 3] = '%';
-                length = length-3;
-            }
-            else{
-                url[length-1] = url[i];
+                length = length - 3;
+            } else {
+                url[length - 1] = url[i];
                 length--;
             }
         }
