@@ -87,7 +87,7 @@ public class Problem02 {
         String str3 = "seth";
 
         //Method N: My original method
-        System.out.println("Method 1: My method =====================");
+        System.out.println("Method N: My method =====================");
         System.out.print(str1 + " ## " + str2 + ": ");
         printAnswer(methodN(str1, str2));
         System.out.print(str1 + " ## " + str3 + ": ");
