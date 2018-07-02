@@ -60,28 +60,20 @@ public class Problem02 {
         return new String(str1Arr);
     }
 
-
-    public static void printAnswer(boolean flag) {
-        if (flag)
-            System.out.println("The strings are permutation of each other.");
-        else
-            System.out.println("There strings are not permutation of each other.");
-    }
-
     public static boolean method2(String str1, String str2) {
         if (str1.length() != str2.length())
             return false;
 
         int[] ascii = new int[128];
 
-        for(int i=0; i<str1.length(); i++){
+        for (int i = 0; i < str1.length(); i++) {
             ascii[str1.charAt(i)]++;
         }
 
 
-        for(int i=0; i<str2.length(); i++){
+        for (int i = 0; i < str2.length(); i++) {
             ascii[str2.charAt(i)]--;
-            if(ascii[str2.charAt(i)]<0)
+            if (ascii[str2.charAt(i)] < 0)
                 return false;
         }
         return true;
@@ -114,6 +106,12 @@ public class Problem02 {
         printAnswer(method2(str1, str2));
         System.out.print(str1 + " ## " + str3 + ": ");
         printAnswer(method2(str1, str3));
+    }
 
+    public static void printAnswer(boolean flag) {
+        if (flag)
+            System.out.println("The strings are permutation of each other.");
+        else
+            System.out.println("There strings are not permutation of each other.");
     }
 }
