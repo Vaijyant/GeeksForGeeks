@@ -18,4 +18,12 @@ public class Graph {
     public void addEdge(int v, int w){
         adj[v].add(w);
     }
+
+    public int getVertexCount(){
+        return adj.length;
+    }
+
+    public LinkedList[] getAdjMatrix(){
+        return adj;
+    }
 }
