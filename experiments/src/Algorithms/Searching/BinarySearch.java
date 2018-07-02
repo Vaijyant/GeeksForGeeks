@@ -1,6 +1,6 @@
 package Algorithms.Searching;
 
-public class BianrySearch {
+public class BinarySearch {
 
     public static void binarySearch(int[] arr, int n) {
 
