@@ -1,4 +1,4 @@
-package XCrackingTheCodingInterview.Chapter1;
+package XCrackingTheCodingInterview.Chapter01;
 
 public class Problem03 {
 
