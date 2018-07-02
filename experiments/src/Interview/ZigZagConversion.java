@@ -18,7 +18,7 @@ public class ZigZagConversion {
             while (i < str.length()) {
                 st = st + str.charAt(i);
                 i = i + skip - (2 * row);
-                ;
+
             }
             skip -= 2;
             row++;
