@@ -8,13 +8,14 @@ public class Node {
         this.data = data;
     }
 
-    public void appendToTail(int d) {
+    public Node appendToTail(int d) {
         Node end = new Node(d);
         Node n = this;
         while (n.next != null) {
             n = n.next;
         }
         n.next = end;
+        return end;
     }
 
     public void display() {
