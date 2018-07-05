@@ -1,4 +1,4 @@
-package XCrackingTheCodingInterview.Chapter2;
+package XCrackingTheCodingInterview.Chapter02;
 
 /**
  * Program to remove duplicates from a LinkedList
