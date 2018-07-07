@@ -18,8 +18,6 @@ public class Problem08 {
                 System.out.println("Loop detected.");
                 break;
             }
-                                                                                                
-
         }
 
         if (p2 == null || p2.next == null) {
