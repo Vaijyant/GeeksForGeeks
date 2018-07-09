@@ -27,10 +27,10 @@ public class Problem08 {
             }
         }
         // set col zero
-        for (int i = 0; i < col.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                if (row[i]) {
-                    matrix[j][i] = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < col.length; j++) {
+                if (col[j]) {
+                    matrix[i][j] = 0;
                 }
             }
         }
