@@ -2,6 +2,10 @@ package Interview.CompanyA;
 
 public class Fibonacci {
 
+    /**
+     * Fibonacci sequence for last n numbers, starting from 0;
+     * */
+
     public static void fib(int n, int count) {
         long[] arr = new long[count];
         for (int i = 0; i < n - 1; i++) {

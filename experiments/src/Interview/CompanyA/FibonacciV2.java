@@ -1,12 +1,15 @@
 package Interview.CompanyA;
 
 public class FibonacciV2 {
-
+    /**
+     * Fibonacci sequence for last n numbers, starting from 1;
+     * */
     public static void fib(int n, int count) {
         long[] arr = new long[count];
         for (int i = 0; i < n; i++) {
             arr[i] = 1;
         }
+
         arr[n] = n;
 
         for (int i = n + 1; i < count; i++) {
