@@ -13,8 +13,7 @@ public class ChainDiscount {
 
         int idx = -1;
 
-        for (int i = 1; i < prices.length ; i++) {
-
+        for (int i = 1; i < prices.length; i++) {
             if (prices[i - 1] >= prices[i]) {
                 for (int j = i - 1; j > idx; j--) {
                     prices[j] = prices[j] - prices[i];
@@ -32,7 +31,6 @@ public class ChainDiscount {
     public static long sum(int[] arr) {
         long sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
             sum += arr[i];
         }
         return sum;

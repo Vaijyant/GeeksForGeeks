@@ -11,7 +11,7 @@ public class Merge2SortedArray {
 
     public static int[] merge(int[] arr1, int[] arr2) {
         /**
-         * Complexity: O(m + n) Time and O(n1 + n2) Extra Space)
+         * Complexity: O(m + n) Time and O(m + n) Extra Space)
          */
 
         int[] merged = new int[arr1.length + arr2.length];
@@ -62,13 +62,11 @@ public class Merge2SortedArray {
         int[] arr1 = {1, 5, 9, 10, 15, 20};
         int[] arr2 = {2, 3, 8, 13};
 
-
         int[] merged = merge(arr1, arr2);
         System.out.println(Arrays.toString(merged));
 
         merge2(arr1, arr2);
         System.out.println(Arrays.toString(arr1));
         System.out.println(Arrays.toString(arr2));
-
     }
 }

@@ -19,14 +19,12 @@ public class ParsingAProgram {
 
             char ch = program.charAt(i);
 
-            if (ch == '(' || ch == '(' || ch == '[') {
+            if (ch == '(' || ch == '{' || ch == '[') {
                 bracketStack.push(ch);
             } else if (ch == ')' || ch == '}' || ch == ']') {
-
-                if (bracketStack.isEmpty() || !isMatching(bracketStack.peek(), ch))
+                if (bracketStack.empty() || !isMatching(bracketStack.peek(), ch))
                     return false;
-                else
-                    bracketStack.pop();
+                bracketStack.pop();
             }
         }
        return bracketStack.empty();
