@@ -4,18 +4,18 @@ public class BinarySearchSqrt {
 
     /**
      * Finding nearest square-root using binary search method
-     * */
+     */
 
     public static int sqrt(int num) {
-        int start = 1, end = num/2 + 1, ans = 0;
+        int start = 1, end = num / 2 + 1, ans = 0;
 
         while (start <= end) {
-            int mid = (start + end) / 2;
+            int mid = start + (end - start) / 2;
 
-            if (mid * mid == num)
+            if (mid == num / mid)
                 return mid;
 
-            if (mid * mid < num) {
+            if (mid < num / mid) {
                 start = mid + 1;
                 ans = mid;
             } else {
@@ -26,7 +26,7 @@ public class BinarySearchSqrt {
     }
 
     public static void main(String[] args) {
-        int x = 3;
+        int x = 2147395599;
         System.out.println(sqrt(x));
     }
 }
