@@ -1,24 +1,27 @@
 package LeetCode.Easy;
 
-public class Solution283 {
+public class  Solution283 {
     /**
      * Move all zeros to the end of the array
      * Company: A
-     * */
+     */
     public void moveZeroes(int[] nums) {
 
-        int k = 0;
+        int pointer = 0;
+        int i = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        while (i < nums.length) {
+
             if (nums[i] != 0) {
-                nums[k] = nums[i];
-                k++;
+                nums[pointer] = nums[i];
+                pointer++;
             }
-        }
 
-        while (k < nums.length) {
-            nums[k] = 0;
-            k++;
+            i++;
+        }
+        while (pointer < nums.length) {
+            nums[pointer] = 0;
+            pointer++;
         }
     }
 }
