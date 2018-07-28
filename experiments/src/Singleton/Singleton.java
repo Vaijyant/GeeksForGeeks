@@ -16,8 +16,6 @@ public class Singleton {
     public Singleton(int j){
         n=j;
         System.out.println("inside < public Singleton(int j) >: "+ n);
-
-
     }
 
     public static Singleton getInstance() {
