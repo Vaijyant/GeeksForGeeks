@@ -3,7 +3,7 @@ package XCrackingTheCodingInterview.Chapter03;
 
 import java.util.LinkedList;
 
-abstract class Animal {
+abstract class  Animal {
     private int order;
     protected String name;
 

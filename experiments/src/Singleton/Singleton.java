@@ -9,10 +9,6 @@ public class Singleton {
         System.out.println("In the private Singleton()");
     }
 
-    Singleton(String a){
-
-    }
-
     public Singleton(int j){
         n=j;
         System.out.println("inside < public Singleton(int j) >: "+ n);
@@ -26,4 +22,3 @@ public class Singleton {
         return st;
     }
 }
-

@@ -13,14 +13,12 @@ public class SolutionX {
             this.name = name;
             this.id = id;
         }
-
     }
 
     public static void main(String[] args) {
 
         Student student1 = new Student("James", "11CS110A");
-        Student student2 = new Student("Harry", "11CS110BA");
-
+        Student student2 = new Student("Harry", "11CS110B");
 
         ArrayList list = new ArrayList();
 
@@ -31,11 +29,9 @@ public class SolutionX {
 
 
         for (Object obj : list) {
-
             if (obj instanceof Student) {
                 System.out.println(((Student) obj).name);
             }
-
         }
     }
 }
