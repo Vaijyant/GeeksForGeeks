@@ -2,32 +2,25 @@ package Interview;
 
 public class ZigZagConversion {
 
-    public static void zigZag(String str, int n) {
+    public static String zigZag(String s, int numRows) {
 
-        char[] strArray = str.toCharArray();
+        if (numRows == 1) return s;
 
-        int row = 0;
-        String st = "";
+        StringBuilder ret = new StringBuilder();
+        int n = s.length();
+        int cycleLen = 2 * numRows - 2;
 
-        int skip = (n - 1) * 2;
-
-
-        while (row < n) {
-
-            int i = row;
-            while (i < str.length()) {
-                st = st + str.charAt(i);
-                i = i + skip - (2 * row);
-
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j + i < n; j += cycleLen) {
+                ret.append(s.charAt(j + i));
+                if (i != 0 && i != numRows - 1 && j + cycleLen - i < n)
+                    ret.append(s.charAt(j + cycleLen - i));
             }
-            skip -= 2;
-            row++;
         }
-        System.out.println(st);
+        return ret.toString();
     }
 
     public static void main(String[] args) {
-
-        zigZag("ABCDEFGHIJKL", 3);
+        System.out.println(zigZag("PAYPALISHIRING", 3));
     }
 }

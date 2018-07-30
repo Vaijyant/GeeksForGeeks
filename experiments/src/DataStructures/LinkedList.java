@@ -17,10 +17,6 @@ class Node {
         n.next = end;
     }
 
-    public boolean hasNext() {
-
-        return this.next != null ? true : false;
-    }
 
     public int getIntData() {
         return this.data;
@@ -29,6 +25,31 @@ class Node {
     public Node next() {
         return this.next;
 
+    }
+
+    public Node delete(Node root, int data) {
+
+        Node current = root;
+        if (current.getIntData() == data)
+            return current.next();
+
+        while (current.next != null) {
+            if (current.next.getIntData() == data) {
+                current.next = current.next.next;
+                current.next = null;
+                break;
+            }
+            current = current.next;
+        }
+        return root;
+    }
+
+    public void traverseLinkedList(Node node) {
+        while (node.next != null) {
+            System.out.print(node.getIntData() + " ");
+            node = node.next();
+        }
+        System.out.print(node.getIntData());
     }
 }
 
@@ -39,15 +60,9 @@ public class LinkedList {
         root.insert(3);
         root.insert(4);
 
-        traverseLinkedList(root);
-    }
+        root.traverseLinkedList(root);
 
-    public static void traverseLinkedList(Node node) {
-
-        while (node.hasNext()) {
-            System.out.print(node.getIntData() + " ");
-            node = node.next();
-        }
-        System.out.print(node.getIntData());
+        System.out.println();
+        root.traverseLinkedList(root.delete(root, 4));
     }
 }
