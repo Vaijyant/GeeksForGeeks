@@ -1,24 +1,22 @@
 package Miscellaneous;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class SetExp {
     public static void main(String[] args){
-        HashMap<Integer, String> map = new HashMap<>();
+        TreeMap<Integer, String> map = new TreeMap<>();
 
-        map.put(5, "Hello");
+        map.put(5, "Tomar");
         map.put(2, "I");
-        map.put(7, "There");
-        map.put(1, "am");
-        map.put(3, "Vaijyant");
-        map.put(-1, "Vaijyant");
+        map.put(1, "Hello");
+        map.put(3, "am");
+        map.put(4, "Vaijyant");
 
         Set<Integer> set = map.keySet();
 
-        map.put(99, "Kim");
+        map.put(99, "Java");
+
+
 
         System.out.println(set);
     }
