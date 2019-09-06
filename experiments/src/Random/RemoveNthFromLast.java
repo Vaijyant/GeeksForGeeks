@@ -6,9 +6,9 @@ public class RemoveNthFromLast {
 
         list.addNode(new Node("One"));
         list.addNode(new Node("Two"));
-        //list.addNode(new Node("Three"));
+        list.addNode(new Node("Three"));
 
-        list.head = removeNthFromLast(list.head, 7);
+        list.head = removeNthFromLast(list.head, 2);
         list.print();
     }
 
