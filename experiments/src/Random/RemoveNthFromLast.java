@@ -23,8 +23,7 @@ public class RemoveNthFromLast {
         for(int i=0; i<n; i++){
             ptr1 = ptr1.next;
         }
-
-        //if remove the first node
+        
         if(ptr1 == null){
             return head.next;
         }
