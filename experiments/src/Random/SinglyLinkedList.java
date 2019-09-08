@@ -6,15 +6,13 @@ public class SinglyLinkedList {
     int addNode(Node node) {
         if (head == null) {
             head = node;
-            return getLength();
+        } else {
+            Node ptr = head;
+            while (ptr.next != null) {
+                ptr = ptr.next;
+            }
+            ptr.next = node;
         }
-
-        Node ptr = head;
-        while (ptr.next != null) {
-            ptr = ptr.next;
-        }
-        ptr.next = node;
-
         return getLength();
     }
 
@@ -22,10 +20,7 @@ public class SinglyLinkedList {
         Node ptr = head;
         int i = 0;
 
-        if(ptr == null)
-            throw new IllegalStateException();
-
-        while (ptr.next != null) {
+        while (ptr != null) {
             ptr = ptr.next;
             i++;
         }
@@ -36,7 +31,7 @@ public class SinglyLinkedList {
         Node ptr = head;
 
         if(ptr == null) {
-            System.out.println("Nothing to remove.");
+            System.out.println("Head is NULL.");
             return;
         }
 

@@ -1,6 +1,7 @@
 package Random;
 
 public class RemoveNthFromLast {
+
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
 
@@ -8,27 +9,32 @@ public class RemoveNthFromLast {
         list.addNode(new Node("Two"));
         list.addNode(new Node("Three"));
 
-        list.head = removeNthFromLast(list.head, 2);
+        System.out.println(list.getLength());
+
+        removeNthFromLast( list.head, 1);
         list.print();
     }
 
-    public static Node removeNthFromLast(Node head, int n) {
+    // Assumption N is valid, i.e., 0 < N <= Length of list
+    public static Node removeNthFromLast(Node head, int N) {
 
-        if(head == null)
+        if (head == null)
             return null;
 
         Node ptr1 = head;
         Node ptr2 = head;
 
-        for(int i=0; i<n; i++){
+        int distance = 1;
+        while (distance <= N) {
             ptr1 = ptr1.next;
+            distance++;
         }
-        
-        if(ptr1 == null){
+
+        if (ptr1 == null) { // i.e., the end of list is reached => distance = length of list => remove the head
             return head.next;
         }
 
-        while(ptr1.next != null){
+        while (ptr1.next != null) {
             ptr1 = ptr1.next;
             ptr2 = ptr2.next;
         }
